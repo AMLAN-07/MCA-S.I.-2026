@@ -18,4 +18,5 @@ public class FindRangeSize
               FindRangeSize FRS = new FindRangeSize();
               FRS.DisplayRangeSize();
          }
+         
     }

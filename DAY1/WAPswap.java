@@ -7,7 +7,6 @@ public class WAPswap {
         int temp = value1; 
         value1 = value2;  
         value2 = temp;  
-        
         System.out.println("\n=====Swapping with a Temporary Variable=====");
         System.out.println("1st value " + value1 + "\n2nd value = " + value2);
     }
