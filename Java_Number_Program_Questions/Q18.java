@@ -3,7 +3,7 @@ package Java_Number_Program_Questions;
 
 public class Q18 {
     public void printFibonacci(int n) {
-        int a = 0, b = 1;
+        int a = 1, b = 1;
         System.out.print(a + " " + b + " ");
         for (int i = 3; i <= n; i++) {
             int c = a + b;
