@@ -3,12 +3,13 @@ package com.Day3_Exception;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 public class ArrayListDemo {
     List<Integer> numbers = new ArrayList<>();
-    Supplier<List<Integer>> listSupplier = () -> new ArrayList<>(2, 4, 6, 8, 10);
+    Supplier<List<Integer>> listSupplier = () -> new ArrayList<>(Arrays.asList(2, 4, 6, 8, 10));
     Predicate<Integer> isEven = num -> num % 2 == 0;
     
     public void addNumbers() {
@@ -23,5 +24,10 @@ public class ArrayListDemo {
                 System.out.print(num + " ");
             }
         }
+    }
+    public static void main(String[] args) {
+        ArrayListDemo demo = new ArrayListDemo();
+        demo.addNumbers();
+        demo.printEvenNumbers();
     }
 }
