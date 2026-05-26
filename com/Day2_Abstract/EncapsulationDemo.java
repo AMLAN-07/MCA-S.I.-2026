@@ -1,4 +1,4 @@
-package com.Abstract_Day2;
+package com.Day2_Abstract;
 
 class Person {
     private String name;

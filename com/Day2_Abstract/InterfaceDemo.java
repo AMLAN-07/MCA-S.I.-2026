@@ -1,4 +1,4 @@
-package com.Abstract_Day2;
+package com.Day2_Abstract;
 
 interface Mobile {
     void call();
