@@ -110,4 +110,32 @@ public class StudentDAO {
         e.printStackTrace();
     }
 }
+    public void getStudentById(int id) {
+        try {
+            Connection con = DBConnection.getConnection();
+
+            String sql = "SELECT * FROM student WHERE id = ?";
+
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ps.setInt(1, id);
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                System.out.println(
+                        rs.getInt("id") + " " +
+                        rs.getString("name") + " " +
+                        rs.getString("course")
+                );
+            } else {
+                System.out.println("Student Not Found!");
+            }
+
+            con.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
